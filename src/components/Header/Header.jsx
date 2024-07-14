@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   const handleMenuClose = () => {
@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer isScrolled={isScrolled}>
+      <HeaderContainer isscrolled={isScrolled.toString()}>
         <div>
           <Logo />
         </div>

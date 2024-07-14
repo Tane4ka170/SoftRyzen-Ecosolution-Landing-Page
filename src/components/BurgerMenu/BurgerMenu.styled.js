@@ -1,18 +1,28 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
-export const BurgerMenuContainer = styled.div`
+export const Overlay = styled.div`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+`;
+
+export const BurgerMenuContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
   width: 300px;
   height: 100%;
   background: #333;
-  z-index: 1000;
+  z-index: 1001;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.3s ease-in-out;
 `;
 
 export const CloseButton = styled.button`
@@ -30,7 +40,6 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  flex-grow: 1; // Додано, щоб простір заповнювався між Nav та SocialLinks
 `;
 
 export const NavLink = styled(Link)`
@@ -48,17 +57,12 @@ export const NavLink = styled(Link)`
 
 export const SocialLinks = styled.div`
   display: flex;
-  justify-content: flex-start; // Вирівнювання по лівому краю
-  margin-top: auto; // Додано, щоб SocialLinks було в нижньому куті
+  justify-content: space-between;
+  margin-top: auto;
 `;
 
 export const SocialLink = styled.a`
   color: #fff;
   text-decoration: none;
   font-size: 24px;
-  margin-right: 8px; // Відстань між іконками
-
-  &:last-child {
-    margin-right: 0; // Для останньої іконки відстань справа не потрібна
-  }
 `;
