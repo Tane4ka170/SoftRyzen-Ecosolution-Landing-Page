@@ -9,8 +9,11 @@ import {
   TextContainer,
   Title,
   WindmillImage,
+  ArrowIcon,
+  Adress,
+  Mail,
+  Copyright,
 } from "./Main.styled";
-import { ReactComponent as ArrowIcon } from "../../img/arrow-right.svg";
 
 const Main = () => {
   const handleLearnMoreClick = () => {
@@ -40,9 +43,9 @@ const Main = () => {
       </Container>
       <Divider />
       <ContactInfo>
-        <span>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</span>
-        <span>office@ecosolution.com</span>
-        <span>ecosolution © 2023</span>
+        <Adress>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</Adress>
+        <Mail>office@ecosolution.com</Mail>
+        <Copyright>ecosolution © 2023</Copyright>
       </ContactInfo>
       <WindmillImage
         src="../../../src/img/wind-turbine-clean-energy.png"

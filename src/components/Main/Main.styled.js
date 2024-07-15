@@ -1,13 +1,23 @@
 import styled from "styled-components";
+import { ReactComponent as ArrowSvg } from "../../img/arrow-right.svg";
 
 export const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 1rem;
-  text-align: left;
-  background-color: #f5f5f5;
-  margin-top: 200px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 36px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 767px) {
+    padding-bottom: 100px;
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+    max-width: 1440px;
+  }
 `;
 
 export const Container = styled.div`
@@ -15,53 +25,98 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
-  margin-bottom: 2rem;
-`;
-
-export const TextContainer = styled.div`
-  max-width: 50%;
-`;
-
-export const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-`;
-
-export const DescriptionContainer = styled.div`
-  max-width: 50%;
-`;
-
-export const Description = styled.p`
-  font-size: 1.25rem;
-  color: #7f8c8d;
-  margin-bottom: 1rem;
-`;
-
-export const LearnMoreButton = styled.button`
-  width: 141px;
-  height: 39px;
-  padding: 4px 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-radius: 500px 0 0 0;
-  border: 1px solid #97d28b;
-  background-color: #2ecc71;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #27ae60;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 14px;
   }
 `;
 
-export const ArrowIcon = styled.svg`
-  width: 1rem;
-  height: 1rem;
+export const TextContainer = styled.div`
+  @media screen and (min-width: 767px) {
+    width: 50%;
+    padding-right: 53px;
+  }
+`;
+
+export const Title = styled.h1`
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 24px;
+    width: 320px;
+  }
+  @media screen and (min-width: 767px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+  }
+`;
+
+export const DescriptionContainer = styled.div`
+  @media screen and (min-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding-left: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 161px;
+    padding-right: 96px;
+  }
+`;
+
+export const Description = styled.p`
+  margin-bottom: 36px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.64px;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 43px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 20px;
+  }
+`;
+
+export const LearnMoreButton = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 3.5px 16px;
+  height: 39px;
+  min-width: 100px;
+  border-radius: 20px;
+  border: 1px solid #97d28b;
+  cursor: pointer;
+  background-color: inherit;
+  color: #000;
+
+  &:hover,
+  &:focus {
+    color: #97d28b;
+    background-color: #173d33;
+    border: none;
+  }
+`;
+
+export const ArrowIcon = styled(ArrowSvg)`
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
   flex-shrink: 0;
+  fill: currentColor;
 `;
 
 export const Divider = styled.hr`
@@ -73,18 +128,45 @@ export const Divider = styled.hr`
 `;
 
 export const ContactInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  font-size: 0.875rem;
-  color: #7f8c8d;
-  margin-bottom: 2rem;
+  margin-bottom: 36px;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 36px;
+  }
 `;
 
 export const WindmillImage = styled.img`
   width: 100%;
   height: auto;
   max-width: 1200px;
+`;
+
+export const Adress = styled.span`
+  display: block;
+  color: inherit;
+  @media screen and (min-width: 767px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 766px) {
+    text-align: center;
+  }
+`;
+
+export const Mail = styled.span`
+  display: block;
+  color: inherit;
+  @media screen and (max-width: 766px) {
+    text-align: center;
+  }
+`;
+
+export const Copyright = styled.span`
+  display: block;
+  color: inherit;
+  @media screen and (max-width: 766px) {
+    display: none;
+  }
 `;

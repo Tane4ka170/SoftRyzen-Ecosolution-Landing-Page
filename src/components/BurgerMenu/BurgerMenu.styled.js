@@ -1,18 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
-export const Overlay = styled.div`
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-`;
-
 export const BurgerMenuContainer = styled.div`
+  display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
   position: fixed;
   top: 0;
   right: 0;
@@ -21,8 +11,17 @@ export const BurgerMenuContainer = styled.div`
   background: #333;
   z-index: 1001;
   padding: 20px;
-  transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
-  transition: transform 0.3s ease-in-out;
+`;
+
+export const Backdrop = styled.div`
+  display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 `;
 
 export const CloseButton = styled.button`
