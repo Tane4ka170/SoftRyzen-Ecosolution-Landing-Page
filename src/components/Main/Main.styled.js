@@ -5,18 +5,14 @@ export const Section = styled.section`
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 36px;
-
-  @media screen and (min-width: 480px) {
-    max-width: 480px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f4f4f4;
   @media screen and (min-width: 767px) {
-    padding-bottom: 100px;
-    max-width: 768px;
+    padding-top: 80px;
   }
   @media screen and (min-width: 1280px) {
-    padding-bottom: 120px;
-    max-width: 1440px;
+    padding-top: 100px;
   }
 `;
 
@@ -29,7 +25,7 @@ export const Container = styled.div`
   padding-bottom: 24px;
   @media screen and (min-width: 767px) {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-bottom: 16px;
   }
   @media screen and (min-width: 1280px) {
@@ -74,6 +70,7 @@ export const DescriptionContainer = styled.div`
   @media screen and (min-width: 1280px) {
     padding-left: 161px;
     padding-right: 96px;
+    margin-top: 24px;
   }
 `;
 
@@ -121,16 +118,19 @@ export const ArrowIcon = styled(ArrowSvg)`
 
 export const Divider = styled.hr`
   width: 100%;
-  max-width: 1200px;
-  border: 0;
-  border-top: 1px solid #ddd;
-  margin: 2rem 0;
+  border: none;
+  border-top: 2px solid #000;
+  margin: 24px 0;
 `;
 
 export const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 36px;
   @media screen and (min-width: 767px) {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 40px;
   }
   @media screen and (min-width: 1280px) {
@@ -138,35 +138,46 @@ export const ContactInfo = styled.div`
   }
 `;
 
-export const WindmillImage = styled.img`
-  width: 100%;
-  height: auto;
-  max-width: 1200px;
-`;
-
 export const Adress = styled.span`
   display: block;
   color: inherit;
+  margin-bottom: 8px;
   @media screen and (min-width: 767px) {
-    width: 50%;
-  }
-  @media screen and (max-width: 766px) {
-    text-align: center;
+    margin-bottom: 0;
+    margin-right: 24px;
   }
 `;
 
 export const Mail = styled.span`
   display: block;
   color: inherit;
-  @media screen and (max-width: 766px) {
-    text-align: center;
+  margin-bottom: 8px;
+  @media screen and (min-width: 767px) {
+    margin-bottom: 0;
+    margin-right: 24px;
   }
 `;
 
 export const Copyright = styled.span`
   display: block;
   color: inherit;
+  text-align: center;
+  @media screen and (min-width: 767px) {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
   @media screen and (max-width: 766px) {
-    display: none;
+    margin-top: 8px;
+  }
+`;
+
+export const WindmillImage = styled.img`
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
   }
 `;

@@ -14,6 +14,7 @@ import {
   Mail,
   Copyright,
 } from "./Main.styled";
+import WindmillSrc from "../../img/wind-turbine-clean-energy.png"; // Завантажуємо зображення
 
 const Main = () => {
   const handleLearnMoreClick = () => {
@@ -47,10 +48,7 @@ const Main = () => {
         <Mail>office@ecosolution.com</Mail>
         <Copyright>ecosolution © 2023</Copyright>
       </ContactInfo>
-      <WindmillImage
-        src="../../../src/img/wind-turbine-clean-energy.png"
-        alt="windmill"
-      />
+      <WindmillImage src={WindmillSrc} alt="windmill" />
     </Section>
   );
 };
