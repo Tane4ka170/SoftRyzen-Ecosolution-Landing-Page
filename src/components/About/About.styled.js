@@ -1,58 +1,66 @@
 import styled from "styled-components";
 
 export const ValuesSection = styled.div`
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f4f4f4;
+  @media screen and (min-width: 767px) {
+    padding-top: 80px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 100px;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 36px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 75px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 124px;
   }
 `;
 
 export const Header = styled.h2`
-  flex: 1;
-  font-size: 24px;
-  position: relative;
-  margin: 0;
+  display: block;
 
-  &::after {
-    content: "";
-    width: 2px;
-    height: 100%;
-    background-color: #000;
-    position: absolute;
-    top: 0;
-    right: -20px;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      height: 2px;
-      top: auto;
-      right: auto;
-      left: 0;
-      bottom: -10px;
-    }
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  @media screen and (max-width: 767px) {
+    padding-right: 97px;
+    margin-bottom: 32px;
+    max-width: 440px;
+  }
+  @media screen and (min-width: 767px) {
+    padding-right: 82px;
+    width: 50%;
+    border-right: 1px solid #97d28b;
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 48px;
+    padding-right: 254px;
   }
 `;
 
 export const Description = styled.p`
-  flex: 2;
-  margin: 0;
-  padding-left: 40px;
-  font-size: 16px;
-  line-height: 1.5;
-
-  @media (max-width: 768px) {
-    padding-left: 0;
-    margin-top: 20px;
+  @media screen and (min-width: 767px) {
+    width: 50%;
+    padding-left: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 161px;
   }
 `;
 
@@ -66,34 +74,37 @@ export const ValuesGrid = styled.div`
   }
 
   div {
-    background-color: #f5f5f5;
+    background-color: #eaedf1;
     padding: 20px;
     text-align: center;
     position: relative;
 
     h3 {
-      margin: 0 0 10px;
-      position: relative;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 2px;
-        background-color: #000;
-        margin: 10px auto;
+      margin-bottom: 12px;
+      padding-bottom: 33px;
+      font-family: Oswald;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-transform: uppercase;
+      border-bottom: 1px solid #97d28b;
+      @media screen and (min-width: 767px) {
+        padding-bottom: 51px;
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 24px;
+        padding-top: 24px;
+        padding-bottom: 94px;
+        font-size: 32px;
       }
     }
 
     p {
-      margin: 0;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
+      font-size: 14px;
+      @media screen and (min-width: 1280px) {
+        font-size: 16px;
+      }
     }
 
     @media (max-width: 768px) {
