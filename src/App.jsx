@@ -1,4 +1,6 @@
 import About from "./components/About/About";
+import Electricity from "./components/Electrisity/Electricity";
+
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
@@ -8,6 +10,7 @@ function App() {
       <Header />
       <Main />
       <About />
+      <Electricity />
     </>
   );
 }
